@@ -1,0 +1,26 @@
+body {
+    background-color:lightblue;
+}
+@media only screen and (min-width: 290px) {
+    .header {
+        margin: 0 auto;
+        width: 500px;
+        height: 100px;
+        float: left;
+        background-color: red;
+        font-family: Arial;
+        font-size: 20px;
+        color:white;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 290px){
+
+}
+
+@media only screen and (min-width: 1290px) {
+
+}
