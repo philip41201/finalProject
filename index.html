@@ -1,0 +1,61 @@
+<!-- Source for the table https://getbootstrap.com/docs/4.3/content/tables/ -->
+<!-- Source for the buttons https://www.w3schools.com/w3css/w3css_buttons.asp -->
+
+<!--doctype html tells what markup language the doc is written in-->
+<!DOCTYPE html>
+<!--html tag wraps all the content on the page-->
+<html>
+<!--the head tag is for the stuff you want on the HTML page but is not part of the content that you want to show on the page-->
+
+<head>
+  <!--sets the character set your document uses-->
+  <meta charset="utf-8">
+  <!-- links css file to html file -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cs.bcp.org/cozort/webdes/nguyenPhilip/git/finalproject1/finalproject/finalproject.css"> 
+  <!-- sets a border for all elements with the tags table, th, td  -->
+  <style>
+    table, th, td {
+  border: 1px solid black;
+}
+  </style>
+  <!--title tag sets the title of the page-->
+  <title>Final Project</title>
+</head>
+<!--contains all the content you want to show on the page-->
+
+<body>
+<header>  
+    <div class="w3-bar w3-border w3-light-grey w3-center">
+      <a href="index.html" style="width:25%" class="w3-bar-item w3-button w3-mobile">Home</a>
+      <a href="inventory.html" style="width:25%" class="w3-bar-item w3-button w3-mobile">Inventory</a>
+      <a href="sold.html" style="width:25%" class="w3-bar-item w3-button w3-mobile">Sold Inventory</a>
+      <a href="sales.html" style="width:25%" class="w3-bar-item w3-button w3-mobile">Sales Data</a>
+    </div>
+<!--contenteditable allows user to edit the data-->
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- scope attribute specifies whether a header cell is for a column or row -->
+          <td scope="col">Date</td>
+          <td scope="col">Quantity</td>
+          <td scope="col">Cost per Ticket</td>
+          <td scope="col">Artist</td>
+          <td scope="col">Venue</td>
+          <td scope="col">Section</td>
+          <td scope="col">Row</td>
+          <td scope="col">Seat</td>
+        </tr>
+      </table>
+
+    <table id="tbl">
+      <tr>
+      </tr>
+    </table>
+    <input type="submit" class="button" value="Add Inventory" onclick="addField('tbl');" />
+</header>
+</body>
+
+<script src="http://cs.bcp.org/cozort/webdes/nguyenPhilip/git/finalproject1/finalproject/finalproject.js"></script>
+</html>
