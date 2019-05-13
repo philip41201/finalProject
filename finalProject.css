@@ -1,0 +1,35 @@
+@media only screen and (min-width: 290px) {
+    body {
+        background-color:white;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    body {
+        background-color:#375E97;
+    }
+    table tr {
+        /* center aligns the text in the table cells*/
+        text-align:center;
+        background-color:#90AFC5;
+    }
+    table td {
+        /* each cell uses 1/8 of the screen width*/
+        width:12.5%;
+        /* sets a fixed width for the cells so they don't expand horizontally when user enter large amounts of data */
+        table-layout: fixed;
+        text-align: center;
+    }
+    /* button settings source */
+    .button {
+        background-color:#BCBABE;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        /* cursor: pointer; */
+    }
+}
