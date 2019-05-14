@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Javascript Calculator</title>
+
+    <SCRIPT language="javascript">    
+   function Calculate() {
+    var table = document.getElementById('table');
+    var items = table.getElementsByTagName('input');
+    var sum = 0;
+    for(var i=0; i<items.length; i++)
+        sum += parseInt(items[i].value);
+    var output = document.getElementById('sum');
+    output.innerHTML = sum;
+}
+    function addRow()
+    {
+var table = document.getElementById('table');
+
+var button = document.getElementsByTagName('input')[0];
+
+button.onclick = function() {
+    var clone = table.rows[table.rows.length - 2].cloneNode(true);
+    clone.cells[0].firstChild.data =
+        clone.cells[0].firstChild.data.replace(/(\d+):/,function(str,g1) {
+                                                           return (+g1 + 1) + ':';
+                                                        });
+    table.tBodies[0].appendChild(clone);
+};
+ }
+    </SCRIPT>
+</head>
+
+<input type=button value='Add Row' onclick="addRow()" />
+<br /><br />
+<table cellspacing=0 cellpadding=4 id="table">
+<tbody>
+<tr><td>Number 1:</td><td><input value=20 style="width:30px" type=text  maxlength=2/></td></tr>
+<tr><td>Number 2:</td><td><input value=25 style="width:30px" type=text  maxlength=2/></td></tr>
+</tbody>
+<tfoot>
+<tr><td style="border-top:solid 1px black;border-bottom:solid 1px black;">Sum:</td><td style="border-top:solid 1px black;border-bottom:solid 1px black;"><div>45</div></td></tr>
+    </tfoot>
+</table>
+<input type=button value='Recalculate Sum' onclick="Calculate()" />
+</body>
+</html>
